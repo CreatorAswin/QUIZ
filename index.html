@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Quiz</title>
+    <style>
+        .head{
+           
+            position: fixed;
+            text-align: center;
+            background: cadetblue;
+            margin-left: 300px;
+            font-size: 15px;
+            width: 1000px;
+
+        }
+        h1,h2{
+            text-align: center;
+            padding: 0 10px;
+            color: chartreuse;
+          
+        }
+        iframe{
+            margin-left: 400px;
+        }
+        .bottom{
+            position: absolute;
+           text-align: center;
+           background: cadetblue;
+          margin-top: -83px;
+           font-size: 20px;
+           margin-left: 300px;
+            font-size: 15px;
+            width: 1000px;
+
+       }
+       img{
+        width: 99px;
+    position: absolute;
+    margin-left: -490px;
+    margin-top: 5px;
+       }
+    .time{
+   background-color: aquamarine;
+   color: brown;
+    margin-left: 1300px;
+    position: fixed;
+       }
+       .qiz{
+        color: blue;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="head">
+    <img src="Centurion-University-AP-logo.webp" alt="logo" srcset="">
+    <h1> Centurion University of Technology and Management</h1>
+    <h2>Gajajyoti - Techno Cultural Fest Celebrations 2K23</h2>
+    <h1 class="qiz">IT Quiz</h1>
+    
+    
+
+    </div>
+    <div class="time">
+        <h3>Remaing time <span id="demo"></span></h3>
+    </div>
+    
+    
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnAVOwqu9_sEuiGoYLr98KpWbr8rZmd62UeEgUpBjbtI7deg/viewform?embedded=true" id ="frame" width="900" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <div class="bottom">
+        <h1>Centurion University of Technology and Management</h1>
+        <h2>Gajajyoti - Techno Cultural Fest Celebrations 2K23</h2>
+    </div>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Feb 27, 2023 11:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML =  minutes + "m " + seconds + "s ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+</body>
+</html>
